@@ -40,7 +40,7 @@ function setPageThemeToStorage() {
 
 if (
   localStorage.getItem(
-    "pageTheme" && localStorage.getItem(cssThemes).length > 0
+    "pageTheme" && localStorage.getItem("cssThemes")?.length > 0
   )
 ) {
   getStoredCssTheme();
