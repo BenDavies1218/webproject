@@ -1,7 +1,7 @@
 // Declare Js Data
 let cssThemes = [];
 
-let pageTheme = [];
+let pageTheme = ["dark"];
 
 // Read the local storage
 
@@ -30,4 +30,22 @@ function getStoredPageTheme() {
 function setCssThemeToStorage() {
   let dataAsJsonString = JSON.stringify(cssThemes);
   localStorage.setItem("cssThemes", dataAsJsonString);
+}
+
+function setPageThemeToStorage() {
+  localStorage.setItem("pageTheme", pageTheme);
+}
+
+// Check if data exists if it does then retrieve else set to default.
+
+if (
+  localStorage.getItem(
+    "pageTheme" && localStorage.getItem(cssThemes).length > 0
+  )
+) {
+  getStoredCssTheme();
+  getStoredPageTheme();
+} else {
+  setCssThemeToStorage();
+  setPageThemeToStorage();
 }
