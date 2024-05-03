@@ -3,20 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Css Theme Generator</title>
-    <script src="./scripts/dataManager.js"></script>
+    <title>CSS Theme Generator</title>
     <link rel="stylesheet" href="style.css">
+    <script src="./scripts/updatedDataManager.js"></script>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
     <div class="row">
-        <div class="column">
-            <h6>Current Theme</h6>
-            <h6 id="pageThemeHeading"></h6>
-            <!-- img for light or dark icon -->
-            <button id="pageThemeButton">Toggle Light / Dark</button>
+        <div class="column themeToggle">
+            <h6 class="text">Current Theme</h6>
+            <h6 id="pageThemeHeading" class="text"></h6>
+            <!-- Icon to represent light or dark theme -->
+            <button id="pageThemeButton" class="text">Toggle Light / Dark</button>
         </div>
     </div>
+    <div class="pick">
+        <h4  class="text">Navigation Bar</h4>
+        <div class="color-picker">
+            <input type="color" class="color-input" id="navBarInput">
+            <div class="color-preview" id="navBarPreview"></div>
+        </div>
+    </div>
+    <div class="pick">
+        <h4  class="text">Text </h4>
+        <div class="color-picker">
+            <input type="color" class="color-input" id="textInput">
+            <div class="color-preview" id="textPreview"></div>
+        </div>
+    </div>
+    
 
-    <script src="./scripts/pageThemeManager.js"></script>
+
+
+    <script src="./scripts/colorPicker.js"></script>
+    <!-- JavaScript for managing page theme -->
+    <script src="./scripts/updatedPageThemeManager.js"></script>
 </body>
 </html>
